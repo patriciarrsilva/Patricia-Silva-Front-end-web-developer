@@ -25,11 +25,11 @@ class Nav extends Component {
             <div className="nav-container">
                 <nav className="nav">
                     <a href="" className="nav-home">
-                        <h1 className="nav-home__title">Patrícia Silva</h1>
-                        <h2 className="nav-home__subtitle">Front-end web developer</h2>
+                        <h1 className="nav-home__title font-size-m">Patrícia Silva</h1>
+                        <h2 className="nav-home__subtitle font-size-xs">Front-end web developer</h2>
                     </a>
 
-                    <ul className={`nav-list ${visibility}`}>
+                    <ul className={`nav-list font-size-xs ${visibility}`}>
                         <li className="nav-list__item"><a href="" className="nav-list__link">Portfolio</a></li>
                         <li className="nav-list__item"><a href="" className="nav-list__link">About Me</a></li>
                         <li className="nav-list__item"><a href="" className="nav-list__link">Skills</a></li>

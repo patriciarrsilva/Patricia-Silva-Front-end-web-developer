@@ -29,17 +29,7 @@
 }
 
 .nav-home__title {
-  font-size: calc(16px + 1vw);
   padding-bottom: 0.3rem;
-}
-
-.nav-home__subtitle {
-  font-size: calc(16px + 0.2vw);
-}
-
-.nav-home__title,
-.nav-home__subtitle {
-  margin: 0;
 }
 
 .menu-icon {
@@ -47,6 +37,8 @@
   right: 1rem;
   display: block;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .bar1,
@@ -54,7 +46,7 @@
 .bar3 {
   width: 35px;
   height: 5px;
-  background-color: white;
+  background: white;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -82,7 +74,6 @@
   width: 100%;
   overflow: hidden;
   background: black;
-  font-size: calc(16px + 0.2vw);
   text-transform: uppercase;
 }
 

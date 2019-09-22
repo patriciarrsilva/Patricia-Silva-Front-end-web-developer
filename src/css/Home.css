@@ -14,16 +14,10 @@
 }
 
 .header__title {
-  font-size: calc(16px + 3vw);
   padding-bottom: 0.3rem;
 }
 
-.header__subtitle {
-  font-size: calc(16px + 2vw);
-}
-
 .header__description {
-  font-size: calc(16px + 0.5vw);
   padding-bottom: 3rem;
 }
 
