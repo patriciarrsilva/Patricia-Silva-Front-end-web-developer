@@ -1,0 +1,35 @@
+.header {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+  color: white;
+  background: blue;
+}
+
+.header__titles {
+  padding-bottom: 3rem;
+}
+
+.header__title {
+  font-size: calc(16px + 3vw);
+  padding-bottom: 0.3rem;
+}
+
+.header__subtitle {
+  font-size: calc(16px + 2vw);
+}
+
+.header__description {
+  font-size: calc(16px + 0.5vw);
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .header__description {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}

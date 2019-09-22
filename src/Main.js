@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './Home';
-import './Main.css';
+import './css/Main.css';
 
 function Main(props) {
     return (

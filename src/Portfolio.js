@@ -1,19 +1,31 @@
-import React from 'react'
+import React from 'react';
+import './css/Portfolio.css';
 
 function Portfolio(props) {
     return (
-        <main>
+        <main id="portfolio" class="portfolio">
             <h2>Portfolio</h2>
 
             <section>
-                <h3><img src="" alt="logo"></img>Udacity Front-End Nanodegree Program</h3>
+                <h3><img src="" alt="logo"></img> Udacity Front-End Nanodegree Program</h3>
 
                 <article>
                     <img src="" alt="neighborhood map project screen" />
                     <h4><a href="">Neighborhood Map</a></h4>
                     <p>Users can search locations on the map and display information about it on an info window</p>
-                    <a href="https://patriciarrsilva.github.io/Neighborhood-Map/" target="_blank" rel="noopener noreferrer">Demo</a>
-                    <a href="https://github.com/patriciarrsilva/Neighborhood-Map" target="_blank" rel="noopener noreferrer">Code</a>
+                    <p>
+                        <a
+                            href="https://patriciarrsilva.github.io/Neighborhood-Map/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Demo
+                        </a> | <a
+                            href="https://github.com/patriciarrsilva/Neighborhood-Map"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Code
+                        </a>
+                    </p>
                     <p>Passed on August 10th, 2018</p>
                     <ul>
                         <li>React (JSX)</li>
