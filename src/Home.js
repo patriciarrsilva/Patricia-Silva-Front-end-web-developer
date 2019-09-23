@@ -6,7 +6,7 @@ function Home(props) {
     return (
         <div className="home">
             <header className="header">
-                <div class="header__titles">
+                <div className="header__titles">
                     <h1 className="header__title">Patrícia Silva</h1>
                     <h2 className="header__subtitle">Front-end Web Developer</h2>
                 </div>

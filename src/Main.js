@@ -4,7 +4,7 @@ import './css/Main.css';
 
 function Main(props) {
     return (
-        <div class="main">
+        <div className="main">
             <Home />
         </div>
     )
