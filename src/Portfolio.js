@@ -21,6 +21,7 @@ class Portfolio extends Component {
                 description: 'Users can search locations on the map and display information about it on an info window',
                 demo: 'https://patriciarrsilva.github.io/Neighborhood-Map/',
                 code: 'https://github.com/patriciarrsilva/Neighborhood-Map',
+                datetime: '2018-08-10',
                 date: 'August 10th, 2018',
                 skills: ['React (JSX)', 'Google Maps API', 'FourSquare API', 'PWA', 'Accessibility', 'Responsive', 'JavaScript (ES6)', 'CSS3', 'HTML5']
             },
@@ -31,16 +32,18 @@ class Portfolio extends Component {
                 demo: 'https://patriciarrsilva.github.io/MyReads-A-Book-Tracking-App/',
                 code: 'https://github.com/patriciarrsilva/MyReads-A-Book-Tracking-App',
                 fork: 'https://github.com/udacity/reactnd-project-myreads-starter',
+                datetime: '2018-07-30',
                 date: 'July 30th, 2018',
                 skills: ['React (JSX)', 'React Router', 'API', 'JavaScript (ES6)', 'HTML5']
             },
             {
                 image: restaurantReviews,
                 title: 'Restaurant Reviews App',
-                description: 'An accessible, responisve and progressive web application',
+                description: 'An accessible, responsive and progressive web application',
                 demo: 'https://patriciarrsilva.github.io/Restaurant-Reviews-App-to-host/',
                 code: 'https://github.com/patriciarrsilva/Restaurant-Reviews-App',
                 fork: 'https://github.com/udacity/mws-restaurant-stage-1',
+                datetime: '2018-07-01',
                 date: 'July 1st, 2018',
                 skills: ['PWA', 'Accessibility', 'Responsive', 'JavaScript (ES6)', 'CSS3', 'HTML5']
             },
@@ -51,6 +54,7 @@ class Portfolio extends Component {
                 demo: '',
                 code: 'https://github.com/patriciarrsilva/Feed-Reader-Testing',
                 fork: 'https://github.com/udacity/frontend-nanodegree-feedreader',
+                datetime: '2018-06-04',
                 date: 'June 4st, 2018',
                 skills: ['Jasmine']
             },
@@ -61,9 +65,75 @@ class Portfolio extends Component {
                 demo: 'https://patriciarrsilva.github.io/Classic-Arcade-Game-Clone/',
                 code: 'https://github.com/patriciarrsilva/Classic-Arcade-Game-Clone',
                 fork: 'https://github.com/udacity/frontend-nanodegree-arcade-game',
+                datetime: '2018-05-21',
                 date: 'May 21st, 2018',
                 skills: ['JavaScript (ES6)']
             },
+            {
+                image: memoryGame,
+                title: 'Memory Game',
+                description: 'A card matching game (a.k.a Concentration)',
+                demo: 'https://patriciarrsilva.github.io/Memory-Game/',
+                code: 'https://github.com/patriciarrsilva/Memory-Game',
+                fork: 'https://github.com/udacity/fend-project-memory-game',
+                datetime: '2018-04-02',
+                date: 'April 2nd, 2018',
+                skills: ['Responsive', 'JavaScript', 'CSS3', 'HTML5']
+            },
+            {
+                image: portfolioSite,
+                title: 'Portfolio Site',
+                description: 'A simple portfolio site to keep track of my projects',
+                demo: 'https://patriciarrsilva.github.io/Portfolio-Site/',
+                code: 'https://github.com/patriciarrsilva/Portfolio-Site',
+                datetime: '2018-03-09',
+                date: 'March 9th, 2018',
+                skills: ['Responsive', 'CSS3', 'HTML5']
+            }
+        ],
+        nanodegreeChallengeProjects: [
+            {
+                image: tradingCards,
+                title: 'Animal Trading Cards',
+                description: 'A trading card with my favorite animal',
+                demo: 'https://patriciarrsilva.github.io/Animal-Trading-Cards/',
+                code: 'https://github.com/patriciarrsilva/Animal-Trading-Cards',
+                fork: 'https://github.com/udacity/fend-animal-trading-cards',
+                pass: 'Passed on',
+                datetime: '2018-02-16',
+                date: 'February 16th, 2018',
+                skills: ['CSS3', 'HTML5']
+            },
+            {
+                image: pixelArt,
+                title: 'Pixel Art Maker',
+                description: 'Users can draw pixel art on a customizable canvas',
+                demo: 'https://patriciarrsilva.github.io/Pixel-Art-Maker/',
+                code: 'https://github.com/patriciarrsilva/Pixel-Art-Maker',
+                fork: 'https://github.com/udacity/project-pixel-art-maker-starter',
+                pass: 'Exercise completed on',
+                datetime: '2018-01',
+                date: 'January 2018',
+                skills: ['JavaScript']
+            }
+        ],
+        fccProjects: [
+            {
+                image: surveyForm,
+                title: 'Survey Form',
+                description: 'A simple survey form',
+                demo: 'https://patriciarrsilva.github.io/Survey-form/',
+                code: 'https://github.com/patriciarrsilva/Survey-form',
+                skills: ['Responsive', 'CSS3', 'HTML5']
+            },
+            {
+                image: tributePage,
+                title: 'Tribute Page',
+                description: 'A simple tribute page',
+                demo: 'https://patriciarrsilva.github.io/Tribute-page/',
+                code: 'https://github.com/patriciarrsilva/Tribute-page',
+                skills: ['Responsive', 'CSS3', 'HTML5']
+            }
         ]
     };
 
@@ -96,7 +166,75 @@ class Portfolio extends Component {
                             {project.fork && (
                                 <p>Forked from <a href={project.fork} target="_blank" rel="noopener noreferrer">starter code</a></p>
                             )}
-                            <p>Passed on {project.date}</p>
+                            <p>Passed on <time datetime={project.datetime}>{project.date}</time></p>
+                            <ul className="project__skills">
+                                {project.skills.map((skill, i) => {
+                                    return (<li className="project__skills-item" key={i}>{skill}</li>)
+                                })}
+                            </ul>
+                        </article>
+                        )
+                    })}
+                </section >
+
+                <section className="portfolio-course">
+                    <h3 className="portfolio-course__title"><img src="" alt="logo"></img> Udacity Front-End Nanodegree Program / Google Developer Challenge Scholarship</h3>
+
+                    {this.state.nanodegreeChallengeProjects.map((project, i) => {
+                        return (<article className="project" key={i}>
+                            <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
+                            <h4 className="project__title"><a href="">{project.title}</a></h4>
+                            <p className="project__description font-size-xs">{project.description}</p>
+                            <p className="project__links">
+                                <a
+                                    href={project.demo}
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Demo
+                                </a> | <a
+                                    href={project.code}
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Code
+                                </a>
+                            </p>
+                            <p>Udacity Front-End Nanodegree Program / Google Developer Challenge Scholarship (forked from <a href={project.fork} target="_blank" rel="noopener noreferrer">starter code</a>)</p>
+                            <p>{project.pass} <time datetime={project.datetime}>{project.date}</time></p>
+                            <ul className="project__skills">
+                                {project.skills.map((skill, i) => {
+                                    return (<li className="project__skills-item" key={i}>{skill}</li>)
+                                })}
+                            </ul>
+                        </article>
+                        )
+                    })}
+                </section>
+
+                <section className="portfolio-course">
+                    <h3><img src="" alt="logo"></img> EDIT Front-End Development Course</h3>
+                </section>
+
+                <section className="portfolio-course">
+                    <h3><img src="" alt="logo"></img>freeCodeCamp Responsive Web Design Certification</h3>
+
+                    {this.state.fccProjects.map((project, i) => {
+                        return (<article className="project" key={i}>
+                            <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
+                            <h4 className="project__title"><a href="">{project.title}</a></h4>
+                            <p className="project__description font-size-xs">{project.description}</p>
+                            <p className="project__links">
+                                <a
+                                    href={project.demo}
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Demo
+                                </a> | <a
+                                    href={project.code}
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Code
+                                </a>
+                            </p>
                             <ul className="project__skills">
                                 {project.skills.map((skill, i) => {
                                     return (<li className="project__skills-item" key={i}>{skill}</li>)
@@ -106,163 +244,6 @@ class Portfolio extends Component {
                         )
                     })}
 
-                    <article className="portfolio-course__project">
-                        <img src={memoryGame} alt="memory game project screen" className="project__image" />
-                        <h4><a>Memory Game</a></h4>
-                        <p>A card matching game (a.k.a Concentration)</p>
-                        <p>
-                            <a
-                                href="https://patriciarrsilva.github.io/Memory-Game/"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Demo
-                            </a> | <a
-                                href="https://github.com/patriciarrsilva/Memory-Game"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Code
-                            </a>
-                        </p>
-                        <p>Forked from <a href="https://github.com/udacity/fend-project-memory-game" target="_blank" rel="noopener noreferrer">starter code</a></p>
-                        <p>Passed on April 2nd, 2018</p>
-                        <ul>
-                            <li>Responsive</li>
-                            <li>JavaScript</li>
-                            <li>CSS3</li>
-                            <li>HTML5</li>
-                        </ul>
-                    </article>
-
-                    <article className="portfolio-course__project">
-                        <img src={portfolioSite} alt="portfolio project screen" className="project__image" />
-                        <h4><a>Portfolio Site</a></h4>
-                        <p>A simple portfolio site to keep track of my projects</p>
-                        <p>
-                            <a
-                                href="https://patriciarrsilva.github.io/Portfolio-Site/"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Demo
-                            </a> | <a
-                                href="https://github.com/patriciarrsilva/Portfolio-Site"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Code
-                            </a>
-                        </p>
-                        <p>Passed on March 9th, 2018</p>
-                        <ul>
-                            <li>Responsive</li>
-                            <li>CSS3</li>
-                            <li>HTML5</li>
-                        </ul>
-                    </article>
-
-                    <article className="portfolio-course__project">
-                        <img src={tradingCards} alt="animal trading cards project screen" className="project__image" />
-                        <h4><a>Animal Trading Cards</a></h4>
-                        <p>A trading card with my favorite animal</p>
-                        <p>
-                            <a
-                                href="https://patriciarrsilva.github.io/Animal-Trading-Cards/"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Demo
-                            </a> | <a
-                                href="https://github.com/patriciarrsilva/Animal-Trading-Cards"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Code
-                            </a>
-                        </p>
-                        <p>Udacity Front-End Nanodegree Program / Google Developer Challenge Scholarship (forked from <a href="https://github.com/udacity/fend-animal-trading-cards" target="_blank" rel="noopener noreferrer">starter code</a>)</p>
-                        <p>Passed on February 16th, 2018</p>
-                        <ul>
-                            <li>CSS3</li>
-                            <li>HTML5</li>
-                        </ul>
-
-                    </article>
-
-                    <article className="portfolio-course__project">
-                        <img src={pixelArt} alt="pixel art maker project screen" className="project__image" />
-                        <h4><a>Pixel Art Maker</a></h4>
-                        <p>Users can draw pixel art on a customizable canvas</p>
-                        <p>
-                            <a
-                                href="https://patriciarrsilva.github.io/Pixel-Art-Maker/"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Demo
-                            </a> | <a
-                                href="https://github.com/patriciarrsilva/Pixel-Art-Maker"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Code
-                            </a>
-                        </p>
-                        <p>Udacity Front-End Nanodegree Program / Google Developer Challenge Scholarship (forked from <a href="https://github.com/udacity/project-pixel-art-maker-starter" target="_blank" rel="noopener noreferrer">starter code</a>)</p>
-                        <p>Exercise completed on January 2018</p>
-                        <ul>
-                            <li>JavaScript</li>
-                        </ul>
-                    </article>
-                </section >
-
-                <section className="portfolio-course">
-                    <h3><img src="" alt="logo"></img> EDIT Front-End Development Course</h3>
-                </section>
-
-                <section className="portfolio-course">
-                    <h3><img src="" alt="logo"></img>freeCodeCamp Responsive Web Design Certification</h3>
-
-                    <article className="portfolio-course__project">
-                        <img src={surveyForm} alt="survey form project screen" className="project__image" />
-                        <h4><a>Survey Form</a></h4>
-                        <p>A simple survey form</p>
-                        <p>
-                            <a
-                                href="https://patriciarrsilva.github.io/Survey-form/"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Demo
-                            </a> | <a
-                                href="https://github.com/patriciarrsilva/Survey-form"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Code
-                            </a>
-                        </p>
-                        <ul>
-                            <li>Responsive</li>
-                            <li>CSS3</li>
-                            <li>HTML5</li>
-                        </ul>
-                    </article>
-
-                    <article className="portfolio-course__project">
-                        <img src={tributePage} alt="tribute page project screen" className="project__image" />
-                        <h4><a>Tribute Page</a></h4>
-                        <p>A simple tribute page</p>
-                        <p>
-                            <a
-                                href="https://patriciarrsilva.github.io/Tribute-page/"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Demo
-                            </a> | <a
-                                href="https://github.com/patriciarrsilva/Tribute-page"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                Code
-                            </a>
-                        </p>
-                        <ul>
-                            <li>Responsive</li>
-                            <li>CSS3</li>
-                            <li>HTML5</li>
-                        </ul>
-                    </article>
                 </section >
             </main>
         )
