@@ -1,7 +1,16 @@
 .portfolio {
-  background: orange;
+  background: var(--light);
   padding: 63.8px 1rem 1rem;
   text-align: center;
+}
+
+.portfolio-course__icon {
+  color: var(--fcc);
+  font-size: var(--font-m);
+}
+
+.portfolio-course__image {
+  height: var(--font-xs);
 }
 
 .project__image {

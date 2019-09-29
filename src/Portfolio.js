@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './css/Portfolio.css';
+import edit from './img/edit.png';
+import udacity from './img/udacity.svg';
 import neighborhoodMap from './img/neighborhood-map.png';
 import myReads from './img/my-reads.png';
 import restaurantReviews from './img/restaurant-reviews.png';
@@ -11,12 +12,16 @@ import tradingCards from './img/trading-cards.png';
 import pixelArt from './img/pixel-art.png';
 import surveyForm from './img/survey-form.png';
 import tributePage from './img/tribute-page.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFreeCodeCamp } from '@fortawesome/free-brands-svg-icons';
+import './css/Portfolio.css';
 
 class Portfolio extends Component {
     state = {
         courses: [
             {
-                title: 'Udacity Front-End Nanodegree Program',
+                title: ' Udacity Front-End Nanodegree Program',
+                image: udacity,
                 projects: [
                     {
                         image: neighborhoodMap,
@@ -135,7 +140,8 @@ class Portfolio extends Component {
                 ]
             },
             {
-                title: 'Udacity Front-End Nanodegree Program / Google Developer Challenge Scholarship',
+                title: ' Udacity Front-End Nanodegree Program / Google Developer Challenge Scholarship',
+                image: udacity,
                 projects: [
                     {
                         image: tradingCards,
@@ -167,11 +173,13 @@ class Portfolio extends Component {
                 ]
             },
             {
-                title: 'EDIT Front-End Development Course',
+                title: ' EDIT Front-End Development Course',
+                image: edit,
                 projects: []
             },
             {
-                title: 'freeCodeCamp Responsive Web Design Certification',
+                title: ' freeCodeCamp Responsive Web Design Certification',
+                icon: faFreeCodeCamp,
                 projects: [
                     {
                         image: surveyForm,
@@ -211,7 +219,13 @@ class Portfolio extends Component {
                     return (
                         <section className="portfolio-course" key={i}>
                             <h3 className="portfolio-course__title">
-                                <img src="" alt="logo"></img> {course.title}
+                                {course.icon && (
+                                    <FontAwesomeIcon icon={course.icon} className="portfolio-course__icon" />
+                                )}
+                                {course.image && (
+                                    <img src={course.image} alt="logo" className="portfolio-course__image"></img>
+                                )}
+                                {course.title}
                             </h3>
 
                             {course.projects.map((project, i) => {

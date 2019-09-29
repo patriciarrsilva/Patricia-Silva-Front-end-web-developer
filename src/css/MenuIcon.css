@@ -3,12 +3,13 @@
   border: none;
   cursor: pointer;
   display: block;
+  padding: 0 1rem;
 }
 
 .bar1,
 .bar2,
 .bar3 {
-  background: white;
+  background: black;
   height: 5px;
   width: 35px;
   margin: 6px 0;

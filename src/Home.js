@@ -1,5 +1,6 @@
 import React from 'react';
 import Portfolio from './Portfolio';
+import './css/Shared.css';
 import './css/Home.css';
 
 function Home(props) {
@@ -14,7 +15,7 @@ function Home(props) {
                 </div>
 
                 <p className="header__description">I combine my passion for learning with my skills to build interesting applications that create unique user experiences</p>
-                <a href="#portfolio">Check out my portfolio below!</a>
+                <a href="#portfolio" className="button">Check out my portfolio below!</a>
             </header>
 
             <Portfolio />

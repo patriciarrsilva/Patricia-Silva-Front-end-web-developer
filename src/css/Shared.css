@@ -1,0 +1,28 @@
+.nav-home:hover,
+.menu-icon:hover,
+.nav-list__link:hover {
+  background: var(--primary-light);
+}
+
+.nav-home:focus,
+.menu-icon:focus,
+.nav-list__link:focus {
+  outline: 0;
+  border: 2px groove var(--secondary);
+}
+
+.nav-home:active,
+.menu-icon:active,
+.nav-list__link:active {
+  background: var(--primary-light);
+  outline: 0;
+  border: 2px groove var(--secondary);
+}
+
+.button {
+  background: var(--secondary);
+  margin: 0 auto;
+  padding: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}

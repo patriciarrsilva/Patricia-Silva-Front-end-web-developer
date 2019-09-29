@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/Shared.css';
 import './css/MenuIcon.css';
 
 function MenuIcon(props) {

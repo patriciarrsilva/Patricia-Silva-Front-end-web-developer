@@ -1,6 +1,7 @@
 import React from 'react';
 import NavigationLinks from './NavigationLinks';
 import MenuIcon from './MenuIcon';
+import './css/Shared.css';
 import './css/Nav.css';
 
 function Nav(props) {
@@ -14,9 +15,9 @@ function Nav(props) {
                     <h2 className="nav-home__subtitle">Front-end web developer</h2>
                 </a>
 
-                <NavigationLinks visible={visible} />
-
                 <MenuIcon handleMenuClick={handleMenuClick} />
+
+                <NavigationLinks visible={visible} />
             </nav>
         </div>
     )

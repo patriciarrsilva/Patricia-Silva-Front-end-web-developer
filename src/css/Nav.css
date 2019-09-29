@@ -11,21 +11,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: black;
+  background: var(--primary-dark);
   height: 63.8px;
   max-width: 1170px;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
   position: relative;
 }
 
 .nav-home {
+  padding: 0.35rem 1rem;
   text-decoration: none;
   transition: all 0.5s;
-}
-
-.nav-home:hover {
-  transform: scale(1.05);
 }
 
 .nav-home__title {
@@ -41,6 +37,10 @@
   .nav-container {
     height: 74.8px;
     overflow: hidden;
+  }
+
+  .nav-home {
+    padding: 0.5rem 1rem;
   }
 
   .nav {

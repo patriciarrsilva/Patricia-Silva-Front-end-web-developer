@@ -1,6 +1,6 @@
 .header {
-  background: blue;
-  color: white;
+  background: var(--primary);
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
