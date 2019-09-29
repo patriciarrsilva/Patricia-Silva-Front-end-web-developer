@@ -13,6 +13,7 @@
 
 .nav-list__link {
   display: block;
+  margin: 18px 0;
   padding: 1rem 0;
   text-align: center;
   text-decoration: none;
@@ -24,7 +25,7 @@
 }
 
 .show {
-  max-height: 300px;
+  max-height: 370px;
 }
 
 .active {
@@ -34,10 +35,10 @@
 @media (min-width: 992px) {
   .nav-list {
     max-height: unset;
+    width: unset;
     overflow: unset;
     right: 1rem;
     top: unset;
-    width: unset;
   }
   .nav-list__item {
     display: inline-block;

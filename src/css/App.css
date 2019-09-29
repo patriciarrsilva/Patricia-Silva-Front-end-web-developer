@@ -28,11 +28,16 @@ ul {
  * Variables
  */
 
-/*font-size*/
 :root {
+  /*font-size*/
+  --font-xxs: calc(16px + 0.1vw);
   --font-xs: calc(16px + 0.2vw);
   --font-s: calc(16px + 0.5vw);
   --font-m: calc(16px + 1vw);
   --font-l: calc(16px + 2vw);
   --font-xl: calc(16px + 3vw);
+
+  /*color*/
+  --linkedin: #0077b5;
+  --github: #333;
 }
