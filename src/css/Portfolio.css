@@ -1,11 +1,21 @@
 .portfolio {
-  padding: 63.8px 1rem 0;
   background: orange;
+  padding: 63.8px 1rem 0;
   text-align: center;
 }
 
 .project__image {
-  width: 100%;
   height: 200px;
+  width: 100%;
   object-fit: cover;
+}
+
+.project-description {
+  font-size: var(--font-xs);
+}
+
+@media (min-width: 992px) {
+  .portfolio {
+    padding: 74.8px 1rem 0;
+  }
 }

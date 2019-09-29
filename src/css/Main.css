@@ -1,9 +1,10 @@
 .main {
-  margin: 63.8px 0 -64.3px;
+  margin: 63.8px auto 0;
+  max-width: 1170px;
 }
 
 @media (min-width: 992px) {
-  .header {
-    margin: 74.8px 0 -75.3px;
+  .main {
+    margin: 74.8px auto 0;
   }
 }

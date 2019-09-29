@@ -1,51 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import NavigationLinks from './NavigationLinks';
+import MenuIcon from './MenuIcon';
 import './css/Nav.css';
 
-class Nav extends Component {
-    state = {
-        visible: false
-    }
+function Nav(props) {
+    const { visible, handleMenuClick } = props;
 
-    handleClick = (e) => {
-        this.setState({ visible: !this.state.visible })
-        e.stopPropagation();
-    }
+    return (
+        <div className="nav-container">
+            <nav className="nav">
+                <a href="" className="nav-home">
+                    <h1 className="nav-home__title">Patrícia Silva</h1>
+                    <h2 className="nav-home__subtitle">Front-end web developer</h2>
+                </a>
 
-    render() {
+                <NavigationLinks visible={visible} />
 
-        let visibility = 'hide';
-        let animation = ''
-
-        if (this.state.visible) {
-            visibility = 'show';
-            animation = 'change';
-        }
-
-        return (
-            <div className="nav-container">
-                <nav className="nav">
-                    <a href="" className="nav-home">
-                        <h1 className="nav-home__title font-size-m">Patrícia Silva</h1>
-                        <h2 className="nav-home__subtitle font-size-xs">Front-end web developer</h2>
-                    </a>
-
-                    <ul className={`nav-list font-size-xs ${visibility}`}>
-                        <li className="nav-list__item"><a href="" className="nav-list__link">Portfolio</a></li>
-                        <li className="nav-list__item"><a href="" className="nav-list__link">About Me</a></li>
-                        <li className="nav-list__item"><a href="" className="nav-list__link">Skills</a></li>
-                        <li className="nav-list__item"><a href="" className="nav-list__link">Work Experience</a></li>
-                        <li className="nav-list__item"><a href="" className="nav-list__link">Education</a></li>
-                    </ul>
-
-                    <button onClick={this.handleClick} className={`menu-icon ${animation}`}>
-                        <div className="bar1"></div>
-                        <div className="bar2"></div>
-                        <div className="bar3"></div>
-                    </button>
-                </nav>
-            </div>
-        )
-    }
+                <MenuIcon handleMenuClick={handleMenuClick} />
+            </nav>
+        </div>
+    )
 }
+
 
 export default Nav

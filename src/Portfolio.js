@@ -27,7 +27,17 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-08-10',
                         date: 'August 10th, 2018',
-                        skills: ['React (JSX)', 'Google Maps API', 'FourSquare API', 'PWA', 'Accessibility', 'Responsive', 'JavaScript (ES6)', 'CSS3', 'HTML5']
+                        skills: [
+                            'React (JSX)',
+                            'Google Maps API',
+                            'FourSquare API',
+                            'PWA',
+                            'Accessibility',
+                            'Responsive',
+                            'JavaScript (ES6)',
+                            'CSS3',
+                            'HTML5'
+                        ]
                     },
                     {
                         image: myReads,
@@ -39,7 +49,13 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-07-30',
                         date: 'July 30th, 2018',
-                        skills: ['React (JSX)', 'React Router', 'API', 'JavaScript (ES6)', 'HTML5']
+                        skills: [
+                            'React (JSX)',
+                            'React Router',
+                            'API',
+                            'JavaScript (ES6)',
+                            'HTML5'
+                        ]
                     },
                     {
                         image: restaurantReviews,
@@ -51,7 +67,14 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-07-01',
                         date: 'July 1st, 2018',
-                        skills: ['PWA', 'Accessibility', 'Responsive', 'JavaScript (ES6)', 'CSS3', 'HTML5']
+                        skills: [
+                            'PWA',
+                            'Accessibility',
+                            'Responsive',
+                            'JavaScript (ES6)',
+                            'CSS3',
+                            'HTML5'
+                        ]
                     },
                     {
                         image: feedReader,
@@ -87,7 +110,12 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-04-02',
                         date: 'April 2nd, 2018',
-                        skills: ['Responsive', 'JavaScript', 'CSS3', 'HTML5']
+                        skills: [
+                            'Responsive',
+                            'JavaScript',
+                            'CSS3',
+                            'HTML5'
+                        ]
                     },
                     {
                         image: portfolioSite,
@@ -98,7 +126,11 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-03-09',
                         date: 'March 9th, 2018',
-                        skills: ['Responsive', 'CSS3', 'HTML5']
+                        skills: [
+                            'Responsive',
+                            'CSS3',
+                            'HTML5'
+                        ]
                     }
                 ]
             },
@@ -115,7 +147,10 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-02-16',
                         date: 'February 16th, 2018',
-                        skills: ['CSS3', 'HTML5']
+                        skills: [
+                            'CSS3',
+                            'HTML5'
+                        ]
                     },
                     {
                         image: pixelArt,
@@ -144,7 +179,11 @@ class Portfolio extends Component {
                         description: 'A simple survey form',
                         demo: 'https://patriciarrsilva.github.io/Survey-form/',
                         code: 'https://github.com/patriciarrsilva/Survey-form',
-                        skills: ['Responsive', 'CSS3', 'HTML5']
+                        skills: [
+                            'Responsive',
+                            'CSS3',
+                            'HTML5'
+                        ]
                     },
                     {
                         image: tributePage,
@@ -152,7 +191,11 @@ class Portfolio extends Component {
                         description: 'A simple tribute page',
                         demo: 'https://patriciarrsilva.github.io/Tribute-page/',
                         code: 'https://github.com/patriciarrsilva/Tribute-page',
-                        skills: ['Responsive', 'CSS3', 'HTML5']
+                        skills: [
+                            'Responsive',
+                            'CSS3',
+                            'HTML5'
+                        ]
                     }
                 ]
             }
@@ -167,14 +210,16 @@ class Portfolio extends Component {
                 {this.state.courses.map((course, i) => {
                     return (
                         <section className="portfolio-course" key={i}>
-                            <h3 className="portfolio-course__title"><img src="" alt="logo"></img> {course.title}</h3>
+                            <h3 className="portfolio-course__title">
+                                <img src="" alt="logo"></img> {course.title}
+                            </h3>
 
                             {course.projects.map((project, i) => {
                                 return (
                                     <article className="project" key={i}>
                                         <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
                                         <h4 className="project__title"><a href="">{project.title}</a></h4>
-                                        <p className="project__description font-size-xs">{project.description}</p>
+                                        <p className="project__description">{project.description}</p>
                                         <p className="project__links">
                                             <a
                                                 href={project.demo}
@@ -192,7 +237,7 @@ class Portfolio extends Component {
                                             <p>Forked from <a href={project.fork} target="_blank" rel="noopener noreferrer">starter code</a></p>
                                         )}
                                         {project.pass && (
-                                            <p>{project.pass} <time datetime={project.datetime}>{project.date}</time></p>
+                                            <p>{project.pass} <time dateTime={project.datetime}>{project.date}</time></p>
                                         )}
                                         <ul className="project__skills">
                                             {project.skills.map((skill, i) => {

@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Nav from './Nav';
 import Main from './Main';
 import Footer from './Footer';
-import logo from './img/logo.svg';
 import './css/App.css';
 
 /*
-  <img src={logo} />
   <a href="https://reactjs.org">Learn React</a>
 */
 
-function App() {
-  return (
-    <div className="App">
-      <Nav />
-      <Main />
-      <Footer />
-    </div>
-  );
+class App extends Component {
+  state = {
+    visible: false
+  }
+
+  handleMenuClick = (e) => {
+    this.setState({ visible: !this.state.visible })
+    e.stopPropagation();
+  }
+
+  handleOutsideClick = (e) => {
+    this.setState({ visible: false })
+    e.stopPropagation();
+  }
+
+  render() {
+    const { visible } = this.state;
+
+    return (
+      <div className="App" >
+        <Nav visible={visible} handleMenuClick={this.handleMenuClick} />
+        <Main handleOutsideClick={this.handleOutsideClick} />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;

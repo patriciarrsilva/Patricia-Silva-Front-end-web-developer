@@ -1,12 +1,12 @@
 .header {
-  height: 100vh;
-  text-align: center;
+  background: blue;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 1rem;
-  color: white;
-  background: blue;
+  height: calc(100vh - 63.8px);
+  text-align: center;
 }
 
 .header__titles {
@@ -18,12 +18,19 @@
 }
 
 .header__description {
+  font-size: var(--font-s);
   padding-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
   .header__description {
-    max-width: 750px;
     margin: 0 auto;
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    height: calc(100vh - 74.8px);
   }
 }
