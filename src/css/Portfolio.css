@@ -13,18 +13,61 @@
   height: var(--font-xs);
 }
 
+.project {
+  background: white;
+  border: 1px solid var(--dark);
+  box-shadow: 10px 10px 5px 0px var(--dark);
+  border-radius: 10px;
+  margin: 3rem 0;
+}
+
 .project__image {
+  border-radius: 10px 10px 0px 0px;
+  display: block;
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.project-description {
-  font-size: var(--font-xs);
+.project__title {
+  background: var(--secondary-dark);
+  color: white;
+  font-size: var(--font-s);
+  padding: 1rem;
+}
+
+.project__title-link {
+  color: white;
+}
+
+.project__description {
+  font-size: var(--font-xxs);
+  padding: 1rem;
+}
+
+.project__fork {
+  font-size: var(--font-xxs);
+  padding: 1rem 1rem 0;
+}
+
+.project__pass {
+  color: var(--green);
+  font-size: var(--font-xxs);
+  font-weight: bold;
+  padding: 1rem 1rem 0;
+}
+
+.project__skills {
+  background: black;
+  border-radius: 0px 0px 10px 10px;
+  color: white;
+  font-size: var(--font-xxs);
+  margin-top: 1rem;
+  padding: 0.5rem;
 }
 
 @media (min-width: 992px) {
   .portfolio {
-    padding: 74.8px 1rem 0;
+    padding: 74.8px 1rem 1rem;
   }
 }

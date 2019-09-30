@@ -3,7 +3,8 @@
   border: none;
   cursor: pointer;
   display: block;
-  padding: 0 1rem;
+  padding: 0.8rem 1rem;
+  transition: all 0.5s;
 }
 
 .bar1,

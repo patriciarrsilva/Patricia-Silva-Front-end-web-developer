@@ -15,7 +15,7 @@ function Nav(props) {
                     <h2 className="nav-home__subtitle">Front-end web developer</h2>
                 </a>
 
-                <MenuIcon handleMenuClick={handleMenuClick} />
+                <MenuIcon visible={visible} handleMenuClick={handleMenuClick} />
 
                 <NavigationLinks visible={visible} />
             </nav>

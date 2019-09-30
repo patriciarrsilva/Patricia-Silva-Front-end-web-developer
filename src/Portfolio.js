@@ -32,17 +32,7 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-08-10',
                         date: 'August 10th, 2018',
-                        skills: [
-                            'React (JSX)',
-                            'Google Maps API',
-                            'FourSquare API',
-                            'PWA',
-                            'Accessibility',
-                            'Responsive',
-                            'JavaScript (ES6)',
-                            'CSS3',
-                            'HTML5'
-                        ]
+                        skills: 'React (JSX), Google Maps API, FourSquare API, PWA, Accessibility, Responsive, JavaScript (ES6), CSS3, HTML5'
                     },
                     {
                         image: myReads,
@@ -54,13 +44,7 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-07-30',
                         date: 'July 30th, 2018',
-                        skills: [
-                            'React (JSX)',
-                            'React Router',
-                            'API',
-                            'JavaScript (ES6)',
-                            'HTML5'
-                        ]
+                        skills: 'React (JSX), React Router, API, JavaScript (ES6), HTML5'
                     },
                     {
                         image: restaurantReviews,
@@ -72,14 +56,7 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-07-01',
                         date: 'July 1st, 2018',
-                        skills: [
-                            'PWA',
-                            'Accessibility',
-                            'Responsive',
-                            'JavaScript (ES6)',
-                            'CSS3',
-                            'HTML5'
-                        ]
+                        skills: 'PWA, Accessibility, Responsive, JavaScript (ES6), CSS3, HTML5'
                     },
                     {
                         image: feedReader,
@@ -91,7 +68,7 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-06-04',
                         date: 'June 4st, 2018',
-                        skills: ['Jasmine']
+                        skills: 'Jasmine'
                     },
                     {
                         image: arcadeGame,
@@ -103,7 +80,7 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-05-21',
                         date: 'May 21st, 2018',
-                        skills: ['JavaScript (ES6)']
+                        skills: 'JavaScript (ES6)'
                     },
                     {
                         image: memoryGame,
@@ -115,12 +92,7 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-04-02',
                         date: 'April 2nd, 2018',
-                        skills: [
-                            'Responsive',
-                            'JavaScript',
-                            'CSS3',
-                            'HTML5'
-                        ]
+                        skills: 'Responsive, JavaScript, CSS3, HTML5'
                     },
                     {
                         image: portfolioSite,
@@ -131,11 +103,7 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-03-09',
                         date: 'March 9th, 2018',
-                        skills: [
-                            'Responsive',
-                            'CSS3',
-                            'HTML5'
-                        ]
+                        skills: 'Responsive, CSS3, HTML5'
                     }
                 ]
             },
@@ -153,10 +121,7 @@ class Portfolio extends Component {
                         pass: 'Passed on',
                         datetime: '2018-02-16',
                         date: 'February 16th, 2018',
-                        skills: [
-                            'CSS3',
-                            'HTML5'
-                        ]
+                        skills: 'CSS3, HTML5'
                     },
                     {
                         image: pixelArt,
@@ -168,7 +133,7 @@ class Portfolio extends Component {
                         pass: 'Exercise completed on',
                         datetime: '2018-01',
                         date: 'January 2018',
-                        skills: ['JavaScript']
+                        skills: 'JavaScript'
                     }
                 ]
             },
@@ -187,11 +152,7 @@ class Portfolio extends Component {
                         description: 'A simple survey form',
                         demo: 'https://patriciarrsilva.github.io/Survey-form/',
                         code: 'https://github.com/patriciarrsilva/Survey-form',
-                        skills: [
-                            'Responsive',
-                            'CSS3',
-                            'HTML5'
-                        ]
+                        skills: 'Responsive, CSS3, HTML5'
                     },
                     {
                         image: tributePage,
@@ -199,11 +160,7 @@ class Portfolio extends Component {
                         description: 'A simple tribute page',
                         demo: 'https://patriciarrsilva.github.io/Tribute-page/',
                         code: 'https://github.com/patriciarrsilva/Tribute-page',
-                        skills: [
-                            'Responsive',
-                            'CSS3',
-                            'HTML5'
-                        ]
+                        skills: 'Responsive, CSS3, HTML5'
                     }
                 ]
             }
@@ -232,36 +189,31 @@ class Portfolio extends Component {
                                 return (
                                     <article className="project" key={i}>
                                         <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
-                                        <h4 className="project__title"><a href="">{project.title}</a></h4>
+                                        <h4 className="project__title"><a href="" className="project__title-link">{project.title}</a></h4>
                                         <p className="project__description">{project.description}</p>
                                         <p className="project__links">
                                             <a
                                                 href={project.demo}
                                                 target="_blank"
-                                                rel="noopener noreferrer">
+                                                rel="noopener noreferrer"
+                                                className="button button--right-margin">
                                                 Demo
-                                        </a> | <a
+                                            </a>
+                                            <a
                                                 href={project.code}
                                                 target="_blank"
-                                                rel="noopener noreferrer">
+                                                rel="noopener noreferrer"
+                                                className="button">
                                                 Code
-                                        </a>
+                                            </a>
                                         </p>
                                         {project.fork && (
-                                            <p>Forked from <a href={project.fork} target="_blank" rel="noopener noreferrer">starter code</a></p>
+                                            <p className="project__fork">Forked from <a href={project.fork} target="_blank" rel="noopener noreferrer">starter code</a></p>
                                         )}
                                         {project.pass && (
-                                            <p>{project.pass} <time dateTime={project.datetime}>{project.date}</time></p>
+                                            <p className="project__pass">{project.pass} <time dateTime={project.datetime}>{project.date}</time></p>
                                         )}
-                                        <ul className="project__skills">
-                                            {project.skills.map((skill, i) => {
-                                                return (
-                                                    <li className="project__skills-item" key={i}>
-                                                        {skill}
-                                                    </li>
-                                                )
-                                            })}
-                                        </ul>
+                                        <p className="project__skills">{project.skills}</p>
                                     </article>
                                 )
                             })}

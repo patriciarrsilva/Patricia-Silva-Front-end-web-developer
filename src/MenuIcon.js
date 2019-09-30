@@ -5,7 +5,7 @@ import './css/MenuIcon.css';
 function MenuIcon(props) {
     const { visible, handleMenuClick } = props;
 
-    let animation = ''
+    let animation = '';
 
     if (visible) {
         animation = 'change';

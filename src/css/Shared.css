@@ -21,8 +21,14 @@
 
 .button {
   background: var(--secondary);
+  display: inline-block;
+  font-size: var(--font-xs);
   margin: 0 auto;
   padding: 18px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.button--right-margin {
+  margin-right: 36px;
 }
