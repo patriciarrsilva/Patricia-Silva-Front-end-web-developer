@@ -10,6 +10,9 @@ import memoryGame from './img/memory-game.png';
 import portfolioSite from './img/portfolio-site.png';
 import tradingCards from './img/trading-cards.png';
 import pixelArt from './img/pixel-art.png';
+import blog from './img/blog.png';
+import tindeirao from './img/tindeirao.png';
+import creative from './img/creative.png';
 import surveyForm from './img/survey-form.png';
 import tributePage from './img/tribute-page.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,8 +23,50 @@ class Portfolio extends Component {
     state = {
         courses: [
             {
-                title: ' Udacity Front-End Nanodegree Program',
+                title: 'EDIT Front-End Development Course',
+                image: edit,
+                link: 'https://edit.com.pt/',
+                projects: [
+                    {
+                        image: blog,
+                        title: 'Blog',
+                        description: 'A blog that uses an API to fetch data for the posts',
+                        demo: 'https://patriciarrsilva.github.io/Blog/',
+                        code: 'https://github.com/patriciarrsilva/Blog',
+                        pass: 'Developed on',
+                        datetime: '2019-08',
+                        date: 'August, 2019',
+                        skills: 'React (JSX), React Router, API, Responsive, JavaScript (ES6), CSS3, HTML5'
+                    },
+                    {
+                        image: tindeirao,
+                        title: 'Tindeirão',
+                        description: 'A responsive progressive web app that uses geolocation',
+                        demo: 'https://patriciarrsilva.github.io/tindeirao/',
+                        code: 'https://github.com/patriciarrsilva/tindeirao',
+                        pass: 'Developed on',
+                        datetime: '2019-07',
+                        date: 'July, 2019',
+                        skills: 'PWA, Responsive, JavaScript (ES6), SASS, CSS3, HTML5, CSS minification, Autoprefixer, Express, Notifications and Push APIs, Web push'
+                    },
+                    {
+                        image: creative,
+                        title: 'Creative',
+                        description: 'A responsive web page with a mobile first approach',
+                        demo: 'https://patriciarrsilva.github.io/Creative-web-page-responsive/',
+                        code: 'https://github.com/patriciarrsilva/Creative-web-page-responsive',
+                        pass: 'Developed on',
+                        datetime: '2019-05',
+                        date: 'May, 2019',
+                        skills: 'Responsive, SASS, CSS3, HTML5'
+                    }
+
+                ]
+            },
+            {
+                title: 'Udacity Front-End Nanodegree Program',
                 image: udacity,
+                link: 'https://www.udacity.com/',
                 projects: [
                     {
                         image: neighborhoodMap,
@@ -50,7 +95,7 @@ class Portfolio extends Component {
                         image: restaurantReviews,
                         title: 'Restaurant Reviews App',
                         description: 'An accessible, responsive and progressive web application',
-                        demo: 'https://patriciarrsilva.github.io/Restaurant-Reviews-App-to-host/',
+                        demo: 'https://patriciarrsilva.github.io/Restaurant-Reviews-App/',
                         code: 'https://github.com/patriciarrsilva/Restaurant-Reviews-App',
                         fork: 'https://github.com/udacity/mws-restaurant-stage-1',
                         pass: 'Passed on',
@@ -62,7 +107,6 @@ class Portfolio extends Component {
                         image: feedReader,
                         title: 'Feed Reader Testing',
                         description: 'Comprehensive unit tests',
-                        demo: '',
                         code: 'https://github.com/patriciarrsilva/Feed-Reader-Testing',
                         fork: 'https://github.com/udacity/frontend-nanodegree-feedreader',
                         pass: 'Passed on',
@@ -108,8 +152,9 @@ class Portfolio extends Component {
                 ]
             },
             {
-                title: ' Udacity Front-End Nanodegree Program / Google Developer Challenge Scholarship',
+                title: 'Udacity Front-End Nanodegree Program / Google Developer Challenge Scholarship',
                 image: udacity,
+                link: 'https://www.udacity.com/scholarships',
                 projects: [
                     {
                         image: tradingCards,
@@ -138,13 +183,9 @@ class Portfolio extends Component {
                 ]
             },
             {
-                title: ' EDIT Front-End Development Course',
-                image: edit,
-                projects: []
-            },
-            {
-                title: ' freeCodeCamp Responsive Web Design Certification',
+                title: 'freeCodeCamp Responsive Web Design Certification',
                 icon: faFreeCodeCamp,
+                link: 'https://learn.freecodecamp.org/',
                 projects: [
                     {
                         image: surveyForm,
@@ -170,7 +211,7 @@ class Portfolio extends Component {
     render() {
         return (
             <main id="portfolio" className="portfolio">
-                <h2>Portfolio</h2>
+                <h2 className="portfolio-title">Portfolio</h2>
 
                 {this.state.courses.map((course, i) => {
                     return (
@@ -182,46 +223,57 @@ class Portfolio extends Component {
                                 {course.image && (
                                     <img src={course.image} alt="logo" className="portfolio-course__image"></img>
                                 )}
-                                {course.title}
+                                <a
+                                    href={course.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="portfolio-course__title-link">
+                                    {course.title}
+                                </a>
                             </h3>
 
-                            {course.projects.map((project, i) => {
-                                return (
-                                    <article className="project" key={i}>
-                                        <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
-                                        <h4 className="project__title"><a href="" className="project__title-link">{project.title}</a></h4>
-                                        <p className="project__description">{project.description}</p>
-                                        <p className="project__links">
-                                            <a
-                                                href={project.demo}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="button button--right-margin">
-                                                Demo
+                            <div className="projects-container">
+                                {course.projects.map((project, i) => {
+                                    return (
+                                        <article className="project" key={i}>
+                                            <a href="" className="project__title-link"><h4 className="project__title">{project.title}</h4></a>
+                                            <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
+                                            <p className="project__description">{project.description}</p>
+                                            <p className="project__links">
+                                                {project.demo && (
+                                                    <a
+                                                        href={project.demo}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="button button--right-margin">
+                                                        Demo
+                                                    </a>
+                                                )}
+                                                <a
+                                                    href={project.code}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="button">
+                                                    Code
                                             </a>
-                                            <a
-                                                href={project.code}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="button">
-                                                Code
-                                            </a>
-                                        </p>
-                                        {project.fork && (
-                                            <p className="project__fork">Forked from <a href={project.fork} target="_blank" rel="noopener noreferrer">starter code</a></p>
-                                        )}
-                                        {project.pass && (
-                                            <p className="project__pass">{project.pass} <time dateTime={project.datetime}>{project.date}</time></p>
-                                        )}
-                                        <p className="project__skills">{project.skills}</p>
-                                    </article>
-                                )
-                            })}
-                        </section >
+                                            </p>
+                                            {project.fork && (
+                                                <p className="project__fork">Forked from <a href={project.fork} target="_blank" rel="noopener noreferrer">starter code</a></p>
+                                            )}
+                                            {project.pass && (
+                                                <p className="project__pass">{project.pass} <time dateTime={project.datetime}>{project.date}</time></p>
+                                            )}
+                                            <p className="project__skills">{project.skills}</p>
+                                        </article>
+                                    )
+                                })}
+                            </div>
+                            <hr></hr>
+                        </section>
                     )
-                })}
-
-            </main >
+                })
+                }
+            </main>
         )
     }
 }

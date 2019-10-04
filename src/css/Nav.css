@@ -19,6 +19,7 @@
 }
 
 .nav-home {
+  height: 63.8px;
   padding: 0.35rem 1rem;
   text-decoration: none;
   transition: all 0.5s;
@@ -41,6 +42,7 @@
 
   .nav-home {
     padding: 0.5rem 1rem;
+    height: 74.8px;
   }
 
   .nav {
