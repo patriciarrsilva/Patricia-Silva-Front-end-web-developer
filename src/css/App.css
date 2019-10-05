@@ -21,10 +21,6 @@ a {
   transition: all 0.5s;
 }
 
-a:hover {
-  transform: scale(1.05);
-}
-
 ul {
   list-style-type: none;
   padding: 0;

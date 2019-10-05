@@ -3,10 +3,7 @@ import Nav from './Nav';
 import Main from './Main';
 import Footer from './Footer';
 import './css/App.css';
-
-/*
-  <a href="https://reactjs.org">Learn React</a>
-*/
+import './css/Shared.css';
 
 class App extends Component {
   state = {

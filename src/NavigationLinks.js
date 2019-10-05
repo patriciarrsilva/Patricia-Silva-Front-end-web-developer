@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './css/NavigationLinks.css';
 
 class NavigationLinks extends Component {
     state = {
         navigationLinks: [
-            'Portfolio',
-            'About Me',
-            'Skills',
-            'Work Experience',
-            'Education'
+            { name: 'Portfolio', link: '/' },
+            { name: 'About Me', link: '/coming-soon' },
+            { name: 'Skills', link: '/coming-soon' },
+            { name: 'Work Experience', link: '/coming-soon' },
+            { name: 'Education', link: '/coming-soon' }
         ]
     }
 
@@ -24,13 +25,11 @@ class NavigationLinks extends Component {
 
         return (
             <ul className={`nav-list ${visibility}`}>
-                {navigationLinks.map((link, i) => {
-                    return (
-                        <li className="nav-list__item" key={i}>
-                            <a href="" className="nav-list__link">{link}</a>
-                        </li>
-                    )
-                })}
+                {navigationLinks.map((navigationLink, i) => (
+                    <li className="nav-list__item" key={i}>
+                        <Link to={navigationLink.link} className="nav-list__link">{navigationLink.name}</Link>
+                    </li>
+                ))}
             </ul>
         )
     }

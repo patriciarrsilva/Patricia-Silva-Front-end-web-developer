@@ -3,6 +3,7 @@
   border: none;
   cursor: pointer;
   display: block;
+  height: 63.8px;
   padding: 0.8rem 1rem;
   transition: all 0.5s;
 }

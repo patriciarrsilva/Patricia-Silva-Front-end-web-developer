@@ -17,6 +17,7 @@
 
 .portfolio-course__title-link {
   padding: 0 1rem;
+  transition: all 0.5s;
 }
 
 .portfolio-course__icon {
@@ -78,6 +79,12 @@
 .project__fork {
   font-size: var(--font-xxs);
   padding: 1rem 1rem 0;
+  transition: all 0.5s;
+}
+
+.portfolio-course__title-link:hover,
+.project__fork-link:hover {
+  transform: scale(1.05);
 }
 
 .project__pass {

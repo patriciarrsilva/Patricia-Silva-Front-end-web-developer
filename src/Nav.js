@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import NavigationLinks from './NavigationLinks';
 import MenuIcon from './MenuIcon';
-import './css/Shared.css';
 import './css/Nav.css';
 
 function Nav(props) {
@@ -10,10 +10,10 @@ function Nav(props) {
     return (
         <div className="nav-container">
             <nav className="nav">
-                <a href="" className="nav-home">
+                <Link to="/" className="nav-home">
                     <h1 className="nav-home__title">Patrícia Silva</h1>
                     <h2 className="nav-home__subtitle">Front-end web developer</h2>
-                </a>
+                </Link>
 
                 <MenuIcon visible={visible} handleMenuClick={handleMenuClick} />
 

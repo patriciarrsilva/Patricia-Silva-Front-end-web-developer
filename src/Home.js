@@ -1,6 +1,5 @@
 import React from 'react';
 import Portfolio from './Portfolio';
-import './css/Shared.css';
 import './css/Home.css';
 
 function Home(props) {

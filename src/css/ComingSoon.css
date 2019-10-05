@@ -1,0 +1,13 @@
+.coming-soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
+  height: calc(100vh - 63.8px - 186px);
+}
+
+@media (min-width: 992px) {
+  .coming-soon {
+    height: calc(100vh - 74.8px - 122px);
+  }
+}

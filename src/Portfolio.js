@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import edit from './img/edit.png';
 import udacity from './img/udacity.svg';
 import neighborhoodMap from './img/neighborhood-map.png';
@@ -213,70 +214,66 @@ class Portfolio extends Component {
             <main id="portfolio" className="portfolio">
                 <h2 className="portfolio-title">Portfolio</h2>
 
-                {this.state.courses.map((course, i) => {
-                    return (
-                        <section className="portfolio-course" key={i}>
-                            <a
-                                href={course.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="portfolio-course__title-link">
-                                <h3 className="portfolio-course__title">
-                                    {course.icon && (
-                                        <FontAwesomeIcon icon={course.icon} className="portfolio-course__icon" />
-                                    )}
-                                    {course.image && (
-                                        <img src={course.image} alt="logo" className="portfolio-course__image"></img>
-                                    )}
-                                    {course.title}
-                                </h3>
-                            </a>
+                {this.state.courses.map((course, i) => (
+                    <section className="portfolio-course" key={i}>
+                        <a
+                            href={course.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="portfolio-course__title-link">
+                            <h3 className="portfolio-course__title">
+                                {course.icon && (
+                                    <FontAwesomeIcon icon={course.icon} className="portfolio-course__icon" />
+                                )}
+                                {course.image && (
+                                    <img src={course.image} alt="logo" className="portfolio-course__image"></img>
+                                )}
+                                {course.title}
+                            </h3>
+                        </a>
 
-                            <div className="projects-container">
-                                {course.projects.map((project, i) => {
-                                    return (
-                                        <article className="project" key={i}>
-                                            <a href="" className="project__title-link">
-                                                <h4 className="project__title">{project.title}</h4>
-                                                <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
-                                            </a>
-                                            <p className="project__description">{project.description}</p>
-                                            <p className="project__links">
-                                                {project.demo && (
-                                                    <a
-                                                        href={project.demo}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="button button--right-margin">
-                                                        Demo
+                        <div className="projects-container">
+                            {course.projects.map((project, i) => (
+                                <article className="project" key={i}>
+                                    <Link to="/coming-soon" className="project__title-link">
+                                        <h4 className="project__title">{project.title}</h4>
+                                        <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
+                                    </Link>
+                                    <p className="project__description">{project.description}</p>
+                                    <p className="project__links">
+                                        {project.demo && (
+                                            <a
+                                                href={project.demo}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="button button--right-margin">
+                                                Demo
                                                     </a>
-                                                )}
-                                                <a
-                                                    href={project.code}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="button">
-                                                    Code
+                                        )}
+                                        <a
+                                            href={project.code}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="button">
+                                            Code
                                             </a>
-                                            </p>
-                                            {project.fork && (
-                                                <p className="project__fork">
-                                                    Forked from <a href={project.fork} target="_blank" rel="noopener noreferrer" className="project__fork-link">starter code</a>
-                                                </p>
-                                            )}
-                                            {project.pass && (
-                                                <p className="project__pass">{project.pass} <time dateTime={project.datetime}>{project.date}</time></p>
-                                            )}
-                                            <p className="project__skills">{project.skills}</p>
-                                        </article>
-                                    )
-                                })}
-                            </div>
-                            <hr className="hr"></hr>
-                        </section>
-                    )
-                })
-                }
+                                    </p>
+                                    {project.fork && (
+                                        <p className="project__fork">
+                                            Forked from <a href={project.fork} target="_blank" rel="noopener noreferrer" className="project__fork-link">starter code</a>
+                                        </p>
+                                    )}
+                                    {project.pass && (
+                                        <p className="project__pass">{project.pass} <time dateTime={project.datetime}>{project.date}</time></p>
+                                    )}
+                                    <p className="project__skills">{project.skills}</p>
+                                </article>
+                            ))}
+                        </div>
+
+                        <hr className="hr"></hr>
+                    </section>
+                ))}
             </main >
         )
     }
