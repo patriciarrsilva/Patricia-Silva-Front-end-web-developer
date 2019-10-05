@@ -67,7 +67,7 @@
 }
 
 .project__title-link:hover {
-  transform: skewX(-1deg);
+  transform: skew(-2deg);
 }
 
 .project__description {

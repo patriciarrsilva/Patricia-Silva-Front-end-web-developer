@@ -1,5 +1,5 @@
 .nav-list {
-  background: var(--primary-dark);
+  background: var(--primary-light);
   font-size: var(--font-xs);
   max-height: 0;
   width: 100%;
@@ -20,13 +20,8 @@
   transition: all 0.5s;
 }
 
-.is-active {
-  border-bottom: 5px solid var(--secondary);
-  box-shadow: inset 0 -5rem 0 0 var(--primary-light);
-}
-
 .show {
-  max-height: 355px;
+  max-height: 360px;
 }
 
 .active {
