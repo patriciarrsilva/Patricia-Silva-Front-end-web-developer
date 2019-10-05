@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './css/NavigationLinks.css';
 
 class NavigationLinks extends Component {
@@ -27,7 +27,7 @@ class NavigationLinks extends Component {
             <ul className={`nav-list ${visibility}`}>
                 {navigationLinks.map((navigationLink, i) => (
                     <li className="nav-list__item" key={i}>
-                        <Link to={navigationLink.link} className="nav-list__link">{navigationLink.name}</Link>
+                        <NavLink exact to={navigationLink.link} className="nav-list__link" activeClassName="is-active">{navigationLink.name}</NavLink>
                     </li>
                 ))}
             </ul>
