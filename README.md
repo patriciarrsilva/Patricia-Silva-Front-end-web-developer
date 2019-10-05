@@ -16,7 +16,7 @@ It has 5 sections to let people know more about my work as a Front-end Web Devel
 
 To see it:
 
-- Click [here](https://patriciarrsilva.github.io/Patricia-Silva-Front-end-Web-Developer/)
+- Click [here](https://patriciarrsilva.github.io/Patricia-Silva-Front-end-Web-Developer/).
 
 or
 
