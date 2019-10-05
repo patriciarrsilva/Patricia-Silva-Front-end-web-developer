@@ -47,7 +47,7 @@ class Portfolio extends Component {
                         pass: 'Developed on',
                         datetime: '2019-07',
                         date: 'July, 2019',
-                        skills: 'PWA, Responsive, JavaScript (ES6), SASS, CSS3, HTML5, CSS minification, Autoprefixer, Express, Notifications and Push APIs, Web push'
+                        skills: 'PWA, Responsive, JavaScript (ES6), SCSS, CSS3, HTML5, CSS minification, Autoprefixer, Express, Notifications and Push APIs, Web push'
                     },
                     {
                         image: creative,
@@ -58,7 +58,7 @@ class Portfolio extends Component {
                         pass: 'Developed on',
                         datetime: '2019-05',
                         date: 'May, 2019',
-                        skills: 'Responsive, SASS, CSS3, HTML5'
+                        skills: 'Responsive, SCSS, CSS3, HTML5'
                     }
 
                 ]
@@ -216,28 +216,30 @@ class Portfolio extends Component {
                 {this.state.courses.map((course, i) => {
                     return (
                         <section className="portfolio-course" key={i}>
-                            <h3 className="portfolio-course__title">
-                                {course.icon && (
-                                    <FontAwesomeIcon icon={course.icon} className="portfolio-course__icon" />
-                                )}
-                                {course.image && (
-                                    <img src={course.image} alt="logo" className="portfolio-course__image"></img>
-                                )}
-                                <a
-                                    href={course.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="portfolio-course__title-link">
+                            <a
+                                href={course.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="portfolio-course__title-link">
+                                <h3 className="portfolio-course__title">
+                                    {course.icon && (
+                                        <FontAwesomeIcon icon={course.icon} className="portfolio-course__icon" />
+                                    )}
+                                    {course.image && (
+                                        <img src={course.image} alt="logo" className="portfolio-course__image"></img>
+                                    )}
                                     {course.title}
-                                </a>
-                            </h3>
+                                </h3>
+                            </a>
 
                             <div className="projects-container">
                                 {course.projects.map((project, i) => {
                                     return (
                                         <article className="project" key={i}>
-                                            <a href="" className="project__title-link"><h4 className="project__title">{project.title}</h4></a>
-                                            <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
+                                            <a href="" className="project__title-link">
+                                                <h4 className="project__title">{project.title}</h4>
+                                                <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
+                                            </a>
                                             <p className="project__description">{project.description}</p>
                                             <p className="project__links">
                                                 {project.demo && (
@@ -258,7 +260,9 @@ class Portfolio extends Component {
                                             </a>
                                             </p>
                                             {project.fork && (
-                                                <p className="project__fork">Forked from <a href={project.fork} target="_blank" rel="noopener noreferrer">starter code</a></p>
+                                                <p className="project__fork">
+                                                    Forked from <a href={project.fork} target="_blank" rel="noopener noreferrer" className="project__fork-link">starter code</a>
+                                                </p>
                                             )}
                                             {project.pass && (
                                                 <p className="project__pass">{project.pass} <time dateTime={project.datetime}>{project.date}</time></p>
@@ -268,12 +272,12 @@ class Portfolio extends Component {
                                     )
                                 })}
                             </div>
-                            <hr></hr>
+                            <hr className="hr"></hr>
                         </section>
                     )
                 })
                 }
-            </main>
+            </main >
         )
     }
 }

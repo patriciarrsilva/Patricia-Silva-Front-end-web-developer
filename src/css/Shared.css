@@ -1,34 +1,51 @@
+.button {
+  background: var(--secondary);
+  display: inline-block;
+  font-size: var(--font-xs);
+  height: 50px;
+  margin: 0 auto;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.button--right-margin {
+  margin-right: 36px;
+}
+
 .nav-home:hover,
 .menu-icon:hover,
-.nav-list__link:hover {
-  background: var(--primary-light);
+.nav-list__link:hover,
+.button:hover {
+  border-bottom: 5px solid var(--secondary);
+  box-shadow: inset 0 -5rem 0 0 var(--primary-light);
 }
 
 .nav-home:focus,
 .menu-icon:focus,
 .nav-list__link:focus {
-  outline: 0;
   border: 2px groove var(--secondary);
+  box-shadow: inset 0 -5rem 0 0 var(--primary-light);
+  outline: 0;
+}
+
+.button:focus {
+  outline: 2px groove var(--secondary);
+  box-shadow: inset 0 -5rem 0 0 var(--primary-light);
+}
+
+.portfolio-course__title-link:focus,
+.project__fork-link:focus,
+.contacts__icon:focus {
+  outline: 2px groove var(--secondary);
 }
 
 .nav-home:active,
 .menu-icon:active,
-.nav-list__link:active {
+.nav-list__link:active,
+.button:active {
   background: var(--primary-light);
-  outline: 0;
   border: 2px groove var(--secondary);
-}
-
-.button {
-  background: var(--secondary);
-  display: inline-block;
-  font-size: var(--font-xs);
-  margin: 0 auto;
-  padding: 18px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.button--right-margin {
-  margin-right: 36px;
+  outline: 0;
 }

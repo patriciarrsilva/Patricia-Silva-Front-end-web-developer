@@ -19,12 +19,12 @@
 
 .contacts__icon {
   font-size: 37px;
+  padding: 0.5rem;
   transition: all 0.5s;
 }
 
 .contacts__icon:hover {
-  font-size: 37px;
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 .linkedin-icon {
