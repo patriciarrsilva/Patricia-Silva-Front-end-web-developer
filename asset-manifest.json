@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Patricia-Silva-Front-end-Web-Developer/static/css/main.9a392ed7.chunk.css",
+    "main.js": "/Patricia-Silva-Front-end-Web-Developer/static/js/main.255bd59b.chunk.js",
+    "main.js.map": "/Patricia-Silva-Front-end-Web-Developer/static/js/main.255bd59b.chunk.js.map",
+    "runtime-main.js": "/Patricia-Silva-Front-end-Web-Developer/static/js/runtime-main.eb8c413d.js",
+    "runtime-main.js.map": "/Patricia-Silva-Front-end-Web-Developer/static/js/runtime-main.eb8c413d.js.map",
+    "static/css/2.764ccc25.chunk.css": "/Patricia-Silva-Front-end-Web-Developer/static/css/2.764ccc25.chunk.css",
+    "static/js/2.7f644c10.chunk.js": "/Patricia-Silva-Front-end-Web-Developer/static/js/2.7f644c10.chunk.js",
+    "static/js/2.7f644c10.chunk.js.map": "/Patricia-Silva-Front-end-Web-Developer/static/js/2.7f644c10.chunk.js.map",
+    "index.html": "/Patricia-Silva-Front-end-Web-Developer/index.html",
+    "precache-manifest.94b0ec567929bf442e51a5926ba2dfd4.js": "/Patricia-Silva-Front-end-Web-Developer/precache-manifest.94b0ec567929bf442e51a5926ba2dfd4.js",
+    "service-worker.js": "/Patricia-Silva-Front-end-Web-Developer/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/Patricia-Silva-Front-end-Web-Developer/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.9a392ed7.chunk.css.map": "/Patricia-Silva-Front-end-Web-Developer/static/css/main.9a392ed7.chunk.css.map",
+    "static/media/arcade-game.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/arcade-game.d3d6e17c.png",
+    "static/media/blog.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/blog.a38a3461.png",
+    "static/media/creative.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/creative.c04a5851.png",
+    "static/media/feed-reader.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/feed-reader.869c7d2d.png",
+    "static/media/memory-game.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/memory-game.cbd1426f.png",
+    "static/media/my-reads.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/my-reads.89d02a8d.png",
+    "static/media/neighborhood-map.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/neighborhood-map.6dd54438.png",
+    "static/media/pixel-art.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/pixel-art.637c0520.png",
+    "static/media/portfolio-site.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/portfolio-site.b65484d4.png",
+    "static/media/restaurant-reviews.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/restaurant-reviews.9daa67a3.png",
+    "static/media/survey-form.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/survey-form.4b7ebaef.png",
+    "static/media/tindeirao.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/tindeirao.044c1e06.png",
+    "static/media/trading-cards.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/trading-cards.b3c59109.png",
+    "static/media/tribute-page.png": "/Patricia-Silva-Front-end-Web-Developer/static/media/tribute-page.4307e75e.png",
+    "static/media/udacity.svg": "/Patricia-Silva-Front-end-Web-Developer/static/media/udacity.5df1bb3f.svg"
+  }
+}
