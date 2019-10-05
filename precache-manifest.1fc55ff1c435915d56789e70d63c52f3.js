@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0861c9ac5eb45b79e5113b8911192e61",
+    "revision": "4b74a394c65385c6a58e4cb757c16d37",
     "url": "/Patricia-Silva-Front-end-Web-Developer/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Patricia-Silva-Front-end-Web-Developer/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "5beaa1a10e0358cc2139",
+    "revision": "bf73f1635ad5065fd1e9",
     "url": "/Patricia-Silva-Front-end-Web-Developer/static/css/main.9a392ed7.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Patricia-Silva-Front-end-Web-Developer/static/js/2.7f644c10.chunk.js"
   },
   {
-    "revision": "5beaa1a10e0358cc2139",
-    "url": "/Patricia-Silva-Front-end-Web-Developer/static/js/main.255bd59b.chunk.js"
+    "revision": "bf73f1635ad5065fd1e9",
+    "url": "/Patricia-Silva-Front-end-Web-Developer/static/js/main.88721f68.chunk.js"
   },
   {
     "revision": "65188778d9cd4d95b8f3",
