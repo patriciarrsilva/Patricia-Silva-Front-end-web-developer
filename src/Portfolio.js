@@ -235,7 +235,7 @@ class Portfolio extends Component {
                         <div className="projects-container">
                             {course.projects.map((project, i) => (
                                 <article className="project" key={i}>
-                                    <Link to="/coming-soon" className="project__title-link">
+                                    <Link to="/project" className="project__title-link">
                                         <h4 className="project__title">{project.title}</h4>
                                         <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
                                     </Link>
@@ -248,7 +248,7 @@ class Portfolio extends Component {
                                                 rel="noopener noreferrer"
                                                 className="button button--right-margin">
                                                 Demo
-                                                    </a>
+                                            </a>
                                         )}
                                         <a
                                             href={project.code}
