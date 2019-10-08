@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Patricia-Silva-Front-end-Web-Developer/precache-manifest.9cc61f33449faa75bc9066c540570a0b.js"
+  "/Patricia-Silva-Front-end-Web-Developer/precache-manifest.8bf359ce8d714a3e618b001427ade7bc.js"
 );
 
 self.addEventListener('message', (event) => {
