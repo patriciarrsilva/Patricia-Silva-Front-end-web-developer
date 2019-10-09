@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7621d127033190d1b0a66fa1347c964c",
+    "revision": "6f6edea3fcae148ffd8fc33acd005515",
     "url": "/Patricia-Silva-Front-end-Web-Developer/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Patricia-Silva-Front-end-Web-Developer/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "2890fa4014abe4007014",
-    "url": "/Patricia-Silva-Front-end-Web-Developer/static/css/main.bae32bf6.chunk.css"
+    "revision": "531075db9fd4bc9bdefb",
+    "url": "/Patricia-Silva-Front-end-Web-Developer/static/css/main.c31266ff.chunk.css"
   },
   {
     "revision": "13ae610166a0ae03a231",
     "url": "/Patricia-Silva-Front-end-Web-Developer/static/js/2.c1d9ba07.chunk.js"
   },
   {
-    "revision": "2890fa4014abe4007014",
-    "url": "/Patricia-Silva-Front-end-Web-Developer/static/js/main.3a7653b3.chunk.js"
+    "revision": "531075db9fd4bc9bdefb",
+    "url": "/Patricia-Silva-Front-end-Web-Developer/static/js/main.70d5d95c.chunk.js"
   },
   {
     "revision": "65188778d9cd4d95b8f3",
