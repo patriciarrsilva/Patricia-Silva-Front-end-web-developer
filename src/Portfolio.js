@@ -212,7 +212,7 @@ class Portfolio extends Component {
     render() {
         return (
             <main id="portfolio" className="portfolio">
-                <h2 className="portfolio-title">Portfolio</h2>
+                <h3 className="portfolio-title">Portfolio</h3>
 
                 {this.state.courses.map((course, i) => (
                     <section className="portfolio-course" key={i}>
@@ -221,7 +221,7 @@ class Portfolio extends Component {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="portfolio-course__title-link">
-                            <h3 className="portfolio-course__title">
+                            <h4 className="portfolio-course__title">
                                 {course.icon && (
                                     <FontAwesomeIcon icon={course.icon} className="portfolio-course__icon" />
                                 )}
@@ -229,14 +229,14 @@ class Portfolio extends Component {
                                     <img src={course.image} alt="logo" className="portfolio-course__image"></img>
                                 )}
                                 {course.title}
-                            </h3>
+                            </h4>
                         </a>
 
                         <div className="projects-container">
                             {course.projects.map((project, i) => (
                                 <article className="project" key={i}>
                                     <Link to="/project" className="project__title-link">
-                                        <h4 className="project__title">{project.title}</h4>
+                                        <h5 className="project__title">{project.title}</h5>
                                         <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
                                     </Link>
                                     <p className="project__description">{project.description}</p>
