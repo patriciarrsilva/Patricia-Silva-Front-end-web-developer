@@ -235,8 +235,8 @@ class Portfolio extends Component {
                         <div className="projects-container">
                             {course.projects.map((project, i) => (
                                 <article className="project" key={i}>
-                                    <Link to="/project" className="project__title-link">
-                                        <h5 className="project__title">{project.title}</h5>
+                                    <Link to="/coming-soon" className="project__title-link">
+                                        <h4 className="project__title">{project.title}</h4>
                                         <img src={project.image} alt={`${project.title} project screen`} className="project__image" />
                                     </Link>
                                     <p className="project__description">{project.description}</p>
